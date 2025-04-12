@@ -6,8 +6,20 @@ const HeroSectionPageComponent = () => {
   return (
     <div className="w-full bg-white  flex items-center justify-center py-16 px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl mx-auto">
+        {/* Right side - Profile Image (shown first on mobile) */}
+        <div className="w-full md:w-1/3 flex justify-center mb-8 md:mb-0 md:justify-end md:pr-12 order-1 md:order-2">
+          <Image
+            src="/rahulpfp.jpg"
+            alt="Rahul Bhardwaj"
+            width={300}
+            height={300}
+            className="object-cover rounded-full"
+            priority
+          />
+        </div>
+
         {/* Left side - Text Content */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-left px-8">
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-left px-8 order-2 md:order-1">
           <h5 className="text-black font-medium">Hey, I&apos;m </h5>
           <h1 className="font-playfair text-4xl font-bold text-red-500 mb-2">
             Rahul Bhardwaj
@@ -74,18 +86,6 @@ const HeroSectionPageComponent = () => {
               <Mail size={24} />
             </a>
           </div>
-        </div>
-
-        {/* Right side - Profile Image */}
-        <div className="w-full md:w-1/3 flex justify-center md:justify-end mt-12 md:mt-0 pr-12">
-          <Image
-            src="/rahulpfp.jpg"
-            alt="Rahul Bhardwaj"
-            width={300}
-            height={300}
-            className="object-cover rounded-full"
-            priority
-          />
         </div>
       </div>
     </div>
